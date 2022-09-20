@@ -51,7 +51,12 @@ public class Pet {
 	@NotNull(message="Favorite Treat is required")
 	@Size(min=3, max=55, message="Favorite treat must be between 3 and 55 characters")
 	private String favoriteTreat;
+	
+	@NotNull(message="Introduction is required")
+	@Size(min=5, max=255, message="Favorite treat must be between 3 and 55 characters")
+	private String introduction;
 		
+	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date createdAt;
@@ -138,6 +143,14 @@ public class Pet {
 	
 	public void setFavoriteTreat(String favoriteTreat) {
 		this.favoriteTreat = favoriteTreat;
+	}
+	
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
 	}
 
 	public Date getCreatedAt() {

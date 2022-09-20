@@ -88,9 +88,9 @@ public class PetController {
 		
 		// like pet
 		@GetMapping("/{id}/like")
-		public String likeProject(@PathVariable Long id) {
+		public String likeProject(@PathVariable Long id, HttpSession session) {
 			Pet pet = petService.getById(id);
-			User user = (Long)session.getAttribute("userId");
+			User user = (User)session.getAttribute("userId");
 			petService.likePet(pet, user);
 			return "redirect:/home";
 		}
