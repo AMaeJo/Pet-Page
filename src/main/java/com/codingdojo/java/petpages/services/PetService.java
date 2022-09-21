@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.codingdojo.java.petpages.models.Pet;
 import com.codingdojo.java.petpages.models.User;
 import com.codingdojo.java.petpages.repositories.PetRepository;
-import com.codingdojo.java.petpages.repositories.UserRepository;
 
 
 @Service
@@ -16,8 +15,6 @@ public class PetService {
 	
 	@Autowired
 	private PetRepository petRepository;
-	@Autowired
-	private UserRepository userRepository;
 
 	
 	public Pet createPet(Pet newPet) {
