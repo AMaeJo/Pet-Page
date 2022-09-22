@@ -28,7 +28,7 @@
     <a href="/home">Back Home</a>
 
     <div class="container">
-        <form:form action="/new" modelAttribute="newPet" class="form" method="post">
+        <form:form action="/pet/new" modelAttribute="newPet" class="form" method="post">
 
             <div class="form-row">
                 <form:errors path="name" class="error"/>
@@ -44,7 +44,7 @@
 
             <div class="form-row">
                 <form:errors path="gender" class="error"/>
-                <!-- <form:label for="gender" path="gender">Gender:</form:label> -->
+                <form:label for="gender" path="gender">Gender:</form:label>
                 Gender: <form:select path="gender">
                     <form:option value="Options..." label="Options"/>
                     <form:option value="Male" label="Male"/>
