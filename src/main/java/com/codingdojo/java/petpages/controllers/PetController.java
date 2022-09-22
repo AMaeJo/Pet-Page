@@ -22,7 +22,6 @@ import com.codingdojo.java.petpages.services.PetService;
 import com.codingdojo.java.petpages.services.UserService;
 
 @Controller
-@RequestMapping("/pet")
 public class PetController {
 	
 	@Autowired
@@ -30,7 +29,12 @@ public class PetController {
 	@Autowired
 	private PetService petService;
 	
-	 @GetMapping("/new")
+	@Autowired
+	private UserService userService;
+	@Autowired
+	private PetService petService;
+	
+	 @GetMapping("/pet/new")
 	 public String newPet(@ModelAttribute("newPet") Profile newPet, HttpSession session, Model model) {
 		 if (session.getAttribute("userId")==null) {
 			 return "redirect:/";
@@ -39,7 +43,7 @@ public class PetController {
 		 return "newPet.jsp";
 	 	}	
 	 
-		@PostMapping("/create")
+		@PostMapping("/pet/create")
 		public String createPet(@Valid @ModelAttribute("newPet") Pet newPet, BindingResult result) {
 			if(result.hasErrors()) {
 				return "newPet.jsp";
@@ -48,7 +52,7 @@ public class PetController {
 			return "redirect:/home";
 		}
 		
-		@GetMapping("/{id}")
+		@GetMapping("/pet/{id}")
 		public String viewPet(@PathVariable Long id, @ModelAttribute("viewPet")Pet viewPet, Model model, HttpSession session) {
 			if (session.getAttribute("userId")==null) {
 				return "redirect:/";
@@ -59,7 +63,7 @@ public class PetController {
 		}
 		
 		
-		@GetMapping("/{id}/edit")
+		@GetMapping("/pet/{id}/edit")
 		public String editPet(@PathVariable Long id, @ModelAttribute("editPet") Pet editPet, Model model, HttpSession session) {
 			if (session.getAttribute("userId")==null) {
 				return "redirect:/";
@@ -69,7 +73,7 @@ public class PetController {
 			return "editPet.jsp";
 		}
 		
-		@PutMapping("/{id}/update")
+		@PutMapping("/pet/{id}/update")
 		public String updatePet(@Valid @ModelAttribute("editPet") Pet editPet, BindingResult result, Model model) {	
 			if(result.hasErrors()) {
 				model.addAttribute(editPet);
@@ -79,7 +83,7 @@ public class PetController {
 			return "redirect:/home";
 		}
 
-		@DeleteMapping("/{id}/delete")
+		@DeleteMapping("/pet/{id}/delete")
 		public String deletePet(@PathVariable Long id) {
 			petService.deleteById(id);
 			return "redirect:/home";
@@ -87,7 +91,7 @@ public class PetController {
 		}
 		
 		// like pet
-		@GetMapping("/{id}/like")
+		@GetMapping("/pet/{id}/like")
 		public String likeProject(@PathVariable Long id, HttpSession session) {
 			Pet pet = petService.getById(id);
 			User user = (User)session.getAttribute("userId");
