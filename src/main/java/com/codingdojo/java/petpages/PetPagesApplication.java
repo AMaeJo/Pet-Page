@@ -1,4 +1,4 @@
-package com.codingdojo.java.petpages;
+package src.main.java.com.codingdojo.java.petpages;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
