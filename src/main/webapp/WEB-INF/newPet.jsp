@@ -27,7 +27,7 @@
     <div class="container" style="border: solid; padding: 50px;">
         
         <div class="container">
-            <form:form action="/pet/new" modelAttribute="newPet" class="form" method="post">
+            <form:form action="/pet/create" modelAttribute="newPet" class="form" method="post">
                 
                 <div class="" style="margin: 25px; padding-left: 300px;">
                     <form:errors path="name" class="error"/>
@@ -66,7 +66,7 @@
             
             <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
                 <a class="btn btn-primary" href="/home" role="button" style="margin-right: 20px;"> Back </a>
-                <input type="submit" value="Submit" class="btn-primary"/>
+                <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
             </div>
             
         </form:form>
