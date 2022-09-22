@@ -75,6 +75,8 @@
             	<form:errors path="introduction" class="error text-danger"/>
             </div>
             
+            
+            
             <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
                 <a class="btn btn-primary" href="/home" role="button" style="margin-right: 20px;"> Back </a>
                 <button class="btn btn-primary" type="submit" value="Submit">Submit</button>

@@ -14,7 +14,7 @@
 		<div class="m-5">
 			<div class="row mb-3">
 				<h1 class="col">Welcome, <c:out value="${user.userName}"/>!</h1>
-				<a href="/logout" class="col mt-3">logout</a>
+				<a href="/logout" class="col mt-3">Logout</a>
 			</div>
 			<br/>
 			

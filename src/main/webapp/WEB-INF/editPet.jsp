@@ -27,18 +27,18 @@
 	                
 	                <div class="" style="margin: 25px; padding-left: 300px;">
 	                    <form:label for="name" path="name" style="font-weight: bold;">Name:</form:label>
-	                    <form:input type="text" path="name" class=""/>
+	                    <form:input type="text" value="${pet.name}" path="name" class=""/>
 	
 	                    <form:label for="favoriteTreat" path="favoriteTreat" style="font-weight: bold;">Favorite Treat:</form:label>
-	                    <form:input path="favoriteTreat" class=""/>
+	                    <form:input type="text" value="${pet.favoriteTreat}" path="favoriteTreat" class=""/>
 	                </div>
 	                
 	                <div class="" style="margin: 25px; padding-left: 200px;">
 	                    <form:label for="species" path="species" style="font-weight: bold;">Species:</form:label>
-	                    <form:input type="text" path="species" class=""/>
+	                    <form:input type="text" value="${pet.species}" path="species" class=""/>
 	
 	                	<form:label for="age" path="age" style="font-weight: bold;">Age:</form:label>
-	                	<form:input path="age" class=""/>
+	                	<form:input path="age" type="text" value="${pet.age}" class=""/>
 				
 	                	<form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
 	                	<form:select path="gender">
@@ -51,7 +51,7 @@
 	                
 	            	<div class="form-row">
 	               	 	<form:label for="introduction" path="introduction" style="font-weight: bold;">Introduction:</form:label>
-	               	 	<form:textarea path="introduction" class="form-control"/>
+	               	 	<form:textarea type="text" value="${pet.introduction}" path="introduction" class="form-control"/>
 	            	</div>
 	            	
 					<form:errors path="user" class="error text-danger"/>
@@ -73,7 +73,7 @@
 	            
 		            <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
 		                <a class="btn btn-primary" href="/pet/${pet.id}" role="button" style="margin-right: 20px;"> Back </a>
-		                <a class="btn btn-primary" href="/pet/${pet.id}" role="button" style="margin-right: 20px;"> Submit </a>
+		                <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
 		            </div>
 	            
 	       		</form:form>

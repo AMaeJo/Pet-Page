@@ -41,7 +41,7 @@
 					</table>
 				</div>
 				<div class="col mr-5" >
-					<h3 style="margin-left:140px;">Meet ${pet.name}</h3>
+					<h3 style="margin-left:140px;">Meet ${pet.name}:</h3>
 					<p style="width:auto; text-align:center;">${pet.introduction}</p>
 				</div>
 				
