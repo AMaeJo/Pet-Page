@@ -23,6 +23,9 @@
 			<div class="row mx-5" style=" margin-top:50px; width:900px; justify-content:center;">
 				<div class="col ml-5">
 					<table class="table table-borderless border" style="width:400px;">
+						<tr>
+							<td>Belongs to: <c:out value="${pet.user.userName}"/></td>
+						</tr>
 			        	<tr>
 			            	<td>Species: <c:out value="${pet.species}"/></td>
 			        	</tr>
