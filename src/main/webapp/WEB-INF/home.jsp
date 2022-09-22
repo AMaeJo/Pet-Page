@@ -24,14 +24,13 @@
 					<tr>
 						<th>Pet Name</th>
 						<th>Owner</th>
-						<th>Give Pets</th>
 						<th>Actions</th>
 					</tr>
-					<c:forEach var="pet" items="${pets}">
+					<c:forEach var="pet" items="${allPets}">
 					<tr>
 						<td>${pet.name}</td>
-						<td>${pet.user_id}</td>
-						<td><a href="/${pet.id}">view</a></td>
+						<td>${pet.user.userName}</td>
+						<td><a href="/pet/${pet.id}">view</a></td>
 					</tr>
 					</c:forEach>
 				</table>
@@ -39,21 +38,22 @@
 			<br/>
 			
 			<!-- User's Pet List -->
-			<div class="mx-5">
+			<!-- <div class="mx-5">
 				<h2>Your Pets</h2>
 				<table class="table table-striped table-bordered">
 					<tr>
 						<th>Pet Name</th>
 						<th>Actions</th>
 					</tr>
-					<c:forEach var="pet" items="${pets}">
+					<c:forEach var="pet" items="${allPets}">
 					<tr>
-						<td><a href="/${pet.id}">view</a></td>
-						<td><c:out value="${pet.id}"/></td>
+						<td>${user.id}</td>
+						<td><a href="/pet/${pet.id}">view</a></td>
+						
 					</tr>
 					</c:forEach>
 				</table>
-			</div>
+			</div>  -->
 			<a href="/pet/new" class="btn btn-outline-dark btn-bg-light w-15 mt-4">Add Pet!</a>
 		</div>
 	</body>
