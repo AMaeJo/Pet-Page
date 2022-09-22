@@ -72,7 +72,7 @@
 		            </div>
 	            
 		            <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
-		                <a class="btn btn-primary" href="/pet/${pet.id}" role="button" style="margin-right: 20px;"> Back </a>
+		                <a class="btn btn-primary" href="/pet/${pet.id}" role="button" style="margin-right: 20px;">Back</a>
 		                <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
 		            </div>
 	            
