@@ -45,10 +45,14 @@
 					<p style="width:auto; text-align:center;">${pet.introduction}</p>
 				</div>
 				
-				<div>
+				<div class="row-2">
 				<c:if test="${pet.user.id==user.id}">
 					<a href="/pet/${pet.id}/edit" class="btn btn-primary" role="button">Edit</a>
-			    	<a href="/pet/${pet.id}/delete" class="btn btn-primary" role="button">Delete</a>
+					<p/>
+			    	<form action="/pet/${pet.id}/delete" method="post">
+   						<input type="hidden" name="_method" value="delete">
+    					<input  class="btn btn-primary" type="submit" value="Delete">
+    				</form>
 				</c:if>
 				</div>
 			</div>
