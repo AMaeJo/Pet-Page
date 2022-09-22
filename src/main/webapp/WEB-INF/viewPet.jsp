@@ -37,13 +37,16 @@
 		        	</tr>
 				</table>
 			</div>
-			<div class="col mx-5">
-				<h3>Meet ${pet.name}:</h3>
+			<div class="col mx-5" >
+				<h3 style="margin-left:140px;">Meet ${pet.name}</h3>
+				<p style="width:400px; text-align:center;">${pet.introduction}</p>
 			</div>
 			
-			<div class="form-row">
-				<a href="/pet/edit/${pet.id}" class="btn btn-primary" role="button">Edit</a>
-		    	<a href="/pet/delete/${pet.id}" class="btn btn-primary" role="button">Delete</a>
+			<div>
+			<c:if test="${pet.user.id==user.id}">
+				<a href="/pet/${pet.id}/edit" class="btn btn-primary" role="button">Edit</a>
+		    	<a href="/pet/${pet.id}/delete" class="btn btn-primary" role="button">Delete</a>
+			</c:if>
 			</div>
 		</div>
 	</body>
