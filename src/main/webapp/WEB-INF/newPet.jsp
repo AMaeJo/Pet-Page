@@ -44,18 +44,18 @@
                     <form:label for="species" path="species" style="font-weight: bold;">Species:</form:label>
                     <form:input type="text" path="species" class=""/>
 
-                    <form:errors path="gender" class="error"/>
-                    <form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
-                    <form:select path="gender">
-                        <form:option value="Options..." label="Options"/>
-                        <form:option value="Male" label="Male"/>
-                    <form:option value="Female" label="Female"/>
-                    <form:option value="Unknown" label="Unknown"/>
-                </form:select>
-
                 <form:errors path="age" class="error"/>
                 <form:label for="age" path="age" style="font-weight: bold;">Age:</form:label>
                 <form:input path="age" class=""/>
+			
+		<form:errors path="gender" class="error"/>
+                <form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
+                <form:select path="gender">
+                 	<form:option value="Options..." label="Options"/>
+                        <form:option value="Male" label="Male"/>
+                    	<form:option value="Female" label="Female"/>
+                    	<form:option value="Unknown" label="Unknown"/>
+                </form:select>
             </div>
                 
             <div class="form-row">
