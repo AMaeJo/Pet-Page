@@ -17,69 +17,63 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-		<div class="row mb-4">
-				<h2 class="col">Welcome, <c:out value="${user.userName}"></c:out>!</h2>
-				<a href="/logout" class="col mt-2">logout</a>
-		</div>
+    <!-- <div class="row mb-4">
+        <h2 class="col">Welcome, <c:out value="${user.userName}"></c:out>!</h2>
+        <a href="/logout" class="col mt-2">logout</a>
+    </div> -->
+    
+    <h1 style="text-align: center; margin: 25px;">Tell us about your pets!</h1>
+    
+    <div class="container" style="border: solid; padding: 50px;">
+        
+        <div class="container">
+            <form:form action="/pet/new" modelAttribute="newPet" class="form" method="post">
+                
+                <div class="" style="margin: 25px; padding-left: 300px;">
+                    <form:errors path="name" class="error"/>
+                    <form:label for="name" path="name" style="font-weight: bold;">Name:</form:label>
+                    <form:input type="text" path="name" class=""/>
 
-    <h1>Show us your pets!</h1>
+                    <form:errors path="favoriteTreat" class="error"/>
+                    <form:label for="favoriteTreat" path="favoriteTreat" style="font-weight: bold;">Favorite Treat:</form:label>
+                    <form:input path="favoriteTreat" class=""/>
+                </div>
+                
+                <div class="" style="margin: 25px; padding-left: 200px;">
+                    <form:errors path="species" class="error"/>
+                    <form:label for="species" path="species" style="font-weight: bold;">Species:</form:label>
+                    <form:input type="text" path="species" class=""/>
 
-    <a href="/home">Back Home</a>
-
-    <div class="container">
-        <form:form action="/pet/new" modelAttribute="newPet" class="form" method="post">
-
-            <div class="form-row">
-                <form:errors path="name" class="error"/>
-                <form:label for="name" path="name">Name:</form:label>
-                <form:input type="text" path="name" class="form-control"/>
-            </div>
-            
-            <div class="form-row">
-                <form:errors path="species" class="error"/>
-                <form:label for="species" path="species">Species:</form:label>
-                <form:input type="text" path="species" class="form-control"/>
-            </div>
-
-            <div class="form-row">
-                <form:errors path="gender" class="error"/>
-                <!-- <form:label for="gender" path="gender">Gender:</form:label> -->
-                Gender: <form:select path="gender">
-                    <form:option value="Options..." label="Options"/>
-                    <form:option value="Male" label="Male"/>
+                    <form:errors path="gender" class="error"/>
+                    <form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
+                    <form:select path="gender">
+                        <form:option value="Options..." label="Options"/>
+                        <form:option value="Male" label="Male"/>
                     <form:option value="Female" label="Female"/>
                     <form:option value="Unknown" label="Unknown"/>
-                    </form:select>
-            </div>
+                </form:select>
 
-            <div class="form-row">
                 <form:errors path="age" class="error"/>
-                <form:label for="age" path="age">Age:</form:label>
-                <form:input path="age" class="form-control"/>
+                <form:label for="age" path="age" style="font-weight: bold;">Age:</form:label>
+                <form:input path="age" class=""/>
             </div>
-
-            <div class="form-row">
-                <form:errors path="favoriteTreat" class="error"/>
-                <form:label for="favoriteTreat" path="favoriteTreat">Favorite Treat:</form:label>
-                <form:input path="favoriteTreat" class="form-control"/>
-            </div>
-
+                
             <div class="form-row">
                 <form:errors path="introduction" class="error"/>
-                <form:label for="introduction" path="introduction">Introduction:</form:label>
+                <form:label for="introduction" path="introduction" style="font-weight: bold;">Introduction:</form:label>
                 <form:textarea path="introduction" class="form-control"/>
             </div>
-
-            <div class="form-row">
+            
+            <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
+                <a class="btn btn-primary" href="/home" role="button" style="margin-right: 20px;"> Back </a>
                 <input type="submit" value="Submit" class="btn-primary"/>
             </div>
-
+            
         </form:form>
     </div>
-
-
-
+    
+    
+    
 </div>
 
 </body>
