@@ -117,7 +117,7 @@ public class Pet {
 		return species;
 	}
 	
-	public void setBreed(String species) {
+	public void setSpecies(String species) {
 		this.species = species;
 	}
 	

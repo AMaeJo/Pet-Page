@@ -29,13 +29,9 @@ public class PetController {
 	@Autowired
 	private PetService petService;
 	
-	@Autowired
-	private UserService userService;
-	@Autowired
-	private PetService petService;
 	
 	 @GetMapping("/pet/new")
-	 public String newPet(@ModelAttribute("newPet") Profile newPet, HttpSession session, Model model) {
+	 public String newPet(@ModelAttribute("newPet") Pet newPet, HttpSession session, Model model) {
 		 if (session.getAttribute("userId")==null) {
 			 return "redirect:/";
 		}
