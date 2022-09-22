@@ -46,12 +46,13 @@
 				</div>
 				
 				<div class="row-2">
+               		<a class="btn btn-primary" href="/home" role="button" style="margin-right: 20px;"> Back </a>
 				<c:if test="${pet.user.id==user.id}">
-					<a href="/pet/${pet.id}/edit" class="btn btn-primary" role="button">Edit</a>
+					<a href="/pet/${pet.id}/edit" class="btn btn-primary" role="button" >Edit</a>
 					<p/>
-			    	<form action="/pet/${pet.id}/delete" method="post">
+			    	<form action="/pet/${pet.id}/delete" method="post" >
    						<input type="hidden" name="_method" value="delete">
-    					<input  class="btn btn-primary" type="submit" value="Delete">
+    					<input  class="btn btn-danger"  type="submit" value="Delete">
     				</form>
 				</c:if>
 				</div>
