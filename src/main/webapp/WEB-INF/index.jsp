@@ -21,7 +21,14 @@
 					<tr class="form-row">
 						<td colspan="2"><h2>Register</h2></td>
 					</tr>
-
+					<tr class="form-row">
+						<td>User Name:</td>
+						<td/>
+						<td>
+							<form:errors class="text-danger" path="userName"/>
+							<form:input class="input" path="userName" style="width:90%;"/>
+						</td>
+					</tr>
 					<tr class="form-row">
 						<td>Email:</td>
 						<td/>
@@ -62,7 +69,14 @@
 					<tr class="form-row">
 						<td colspan="2"><h2>Login</h2></td>
 					</tr>
-
+					<tr class="form-row">
+						<td>Username:</td>
+						<td/>
+						<td>
+							<form:errors class="text-danger" path="userName"/>
+							<form:input class="input" path="userName" style="width:90%;"/>
+						</td>
+					</tr>
 					<tr class="form-row">
 						<td>Password:</td>
 						<td/>
