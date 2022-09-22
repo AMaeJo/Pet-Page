@@ -44,8 +44,8 @@
 
             <div class="form-row">
                 <form:errors path="gender" class="error"/>
-                <form:label for="gender" path="gender">Gender:</form:label>
-                <form:select path="gender">
+                <!-- <form:label for="gender" path="gender">Gender:</form:label> -->
+                Gender: <form:select path="gender">
                     <form:option value="Options..." label="Options"/>
                     <form:option value="Male" label="Male"/>
                     <form:option value="Female" label="Female"/>

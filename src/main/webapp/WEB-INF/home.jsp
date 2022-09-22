@@ -47,7 +47,7 @@
 			</tr>
 			</c:forEach>
 		</table>
-		<a href="/new" class="btn btn-outline-dark btn-bg-light w-25 mt-4">Add Pet!</a>
+		<a href="/pet/new" class="btn btn-outline-dark btn-bg-light w-25 mt-4">Add Pet!</a>
 		
 
 	</body>
