@@ -11,7 +11,7 @@
 	</head>
 	
 	<body>
-		<h1 class="text-center text-primary mt-5">TEST PAGE FOR LOGIN<br/>hi victoria :)</h1>
+		<h1 class="text-center text-primary mt-5">Welcome to Pet Pages!</h1>
 		<div class="container m-8 mt-5 w-auto d-flex">
 			<form:form action="/register" method="post" modelAttribute="newUser">
 			
@@ -22,7 +22,7 @@
 						<td colspan="2"><h2>Register</h2></td>
 					</tr>
 					<tr class="form-row">
-						<td>User Name:</td>
+						<td>Username:</td>
 						<td/>
 						<td>
 							<form:errors class="text-danger" path="userName"/>
