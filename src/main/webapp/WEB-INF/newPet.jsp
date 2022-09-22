@@ -28,7 +28,7 @@
     <a href="/home">Back Home</a>
 
     <div class="container">
-        <form:form action="/pet/create" modelAttribute="newPet" class="form" method="post">
+        <form:form action="/pet/new" modelAttribute="newPet" class="form" method="post">
 
             <div class="form-row">
                 <form:errors path="name" class="error"/>
