@@ -33,15 +33,15 @@ public class Pet {
 	private Long id;
 
 	@NotEmpty(message="Name is required")
-	@Size(min=3, max=55, message="Name must be at least between 3 and 35 characters")
+	@Size(min=3, max=55, message="Name must be at least between 3 and 55 characters")
 	private String name;
 	
-	@NotNull(message="Breed is required")
-	@Size(min=6, max=255, message="Breed has to be between 5 and 30 characters")
-		private String breed;
+	@NotNull(message="Species is required")
+	@Size(min=6, max=30, message="Species has to be between 6 and 30 characters")
+		private String species;
 	
 	@NotNull(message="Gender is required")
-	@Size(min=3, max=255, message="Gender has to be between 1 and 6 characters")
+	@Size(min=1, max=6, message="Gender has to be between 1 and 6 characters")
 	private String gender;
 		
 	@Min(value = 0, message="Age cannot be less than 0 .")
@@ -53,7 +53,7 @@ public class Pet {
 	private String favoriteTreat;
 	
 	@NotNull(message="Introduction is required")
-	@Size(min=5, max=255, message="Favorite treat must be between 3 and 55 characters")
+	@Size(min=5, max=255, message="Favorite treat must be between 5 and 255 characters")
 	private String introduction;
 		
 	
@@ -113,12 +113,12 @@ public class Pet {
 		this.name = name;
 	}
 		
-	public String getBreed() {
-		return breed;
+	public String getSpecies() {
+		return species;
 	}
 	
-	public void setBreed(String breed) {
-		this.breed = breed;
+	public void setBreed(String species) {
+		this.species = species;
 	}
 	
 	public String getGender() {
@@ -178,6 +178,8 @@ public class Pet {
 	protected void onUpdate() {
 		this.updatedAt = new Date();
 	}
+	
+	// this is a comment
 		   
 
 }
