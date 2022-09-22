@@ -28,7 +28,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name="users")
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@NotEmpty(message="User Name is required")

@@ -29,7 +29,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Pet {
 		
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@NotEmpty(message="Name is required")
