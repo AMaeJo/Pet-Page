@@ -11,45 +11,51 @@
 	</head>
 	
 	<body>
-		<div class="row mb-4">
-				<h2 class="col">Welcome, <c:out value="${user.userName}"></c:out>!</h2>
-				<a href="/logout" class="col mt-2">logout</a>
+		<div class="m-5">
+			<div class="row mb-3">
+				<h1 class="col">Welcome, <c:out value="${user.userName}"></c:out>!</h1>
+				<a href="/logout" class="col mt-3">logout</a>
+			</div>
+			<br/>
+			
+			<!-- All Pets -->
+			<div class="mx-5">
+				<table class="table table-striped table-bordered">
+					<tr>
+						<th>Pet Name</th>
+						<th>Owner</th>
+						<th>Give Pets</th>
+						<th>Actions</th>
+					</tr>
+					<c:forEach var="pet" items="${pets}">
+					<tr>
+						<td>${pet.name}</td>
+						<td>${pet.user_id}</td>
+						<td><a href="/${pet.id}">view</a></td>
+					</tr>
+					</c:forEach>
+				</table>
+			</div>
+			<br/>
+			
+			<!-- User's Pet List -->
+			<div class="mx-5">
+				<h2>Your Pets</h2>
+				<table class="table table-striped table-bordered">
+					<tr>
+						<th>Pet Name</th>
+						<th>Actions</th>
+					</tr>
+					<c:forEach var="pet" items="${pets}">
+					<tr>
+						<td><a href="/${pet.id}">view</a></td>
+						<td><c:out value="${pet.id}"/></td>
+					</tr>
+					</c:forEach>
+				</table>
+			</div>
+			<a href="/pet/new" class="btn btn-outline-dark btn-bg-light w-15 mt-4">Add Pet!</a>
 		</div>
-		<br/>
-		
-		<!-- All Pets -->
-		<table class="table table-striped table-bordered">
-			<tr>
-				<th>Pet Name</th>
-				<th>Owner</th>
-				<th>Give Pets</th>
-				<th>Actions</th>
-			</tr>
-			<c:forEach var="pet" items="${pets}">
-			<tr>
-				<td>${pet.name}</td>
-				<td>${pet.user_id}</td>
-				<td><a href="/${pet.id}">view</a></td>
-			</tr>
-			</c:forEach>
-		</table>
-		
-		<!-- User's Pet List -->
-		<table class="table table-striped table-bordered">
-			<tr>
-				<th>Pet Name</th>
-				<th>Actions</th>
-			</tr>
-			<c:forEach var="pet" items="${pets}">
-			<tr>
-				<td><a href="/${pet.id}">view</a></td>
-				<td><c:out value="${pet.id}"/></td>
-			</tr>
-			</c:forEach>
-		</table>
-		<a href="/pet/new" class="btn btn-outline-dark btn-bg-light w-25 mt-4">Add Pet!</a>
-		
-
 	</body>
 
 
