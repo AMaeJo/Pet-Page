@@ -57,6 +57,9 @@
                	 	<form:label for="introduction" path="introduction" style="font-weight: bold;">Introduction:</form:label>
                	 	<form:textarea path="introduction" class="form-control"/>
             	</div>
+            	
+				<form:errors path="user" class="error text-danger"/>
+				<form:input type="hidden" path="user" value="${user.id}"/>
             
             <!-- Error Messages -->
             <div>
