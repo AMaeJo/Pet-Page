@@ -30,38 +30,46 @@
             <form:form action="/pet/create" modelAttribute="newPet" class="form" method="post">
                 
                 <div class="" style="margin: 25px; padding-left: 300px;">
-                    <form:errors path="name" class="error"/>
                     <form:label for="name" path="name" style="font-weight: bold;">Name:</form:label>
                     <form:input type="text" path="name" class=""/>
 
-                    <form:errors path="favoriteTreat" class="error"/>
                     <form:label for="favoriteTreat" path="favoriteTreat" style="font-weight: bold;">Favorite Treat:</form:label>
                     <form:input path="favoriteTreat" class=""/>
                 </div>
                 
                 <div class="" style="margin: 25px; padding-left: 200px;">
-                    <form:errors path="species" class="error"/>
                     <form:label for="species" path="species" style="font-weight: bold;">Species:</form:label>
                     <form:input type="text" path="species" class=""/>
 
-                <form:errors path="age" class="error"/>
-                <form:label for="age" path="age" style="font-weight: bold;">Age:</form:label>
-                <form:input path="age" class=""/>
+                	<form:label for="age" path="age" style="font-weight: bold;">Age:</form:label>
+                	<form:input path="age" class=""/>
 			
-		<form:errors path="gender" class="error"/>
-                <form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
-                <form:select path="gender">
+                	<form:label for="gender" path="gender" style="font-weight: bold;">Gender:</form:label>
+                	<form:select path="gender">
                  	<form:option value="Options..." label="Options"/>
                         <form:option value="Male" label="Male"/>
                     	<form:option value="Female" label="Female"/>
                     	<form:option value="Unknown" label="Unknown"/>
-                </form:select>
-            </div>
+                	</form:select>
+            	</div>
                 
-            <div class="form-row">
-                <form:errors path="introduction" class="error"/>
-                <form:label for="introduction" path="introduction" style="font-weight: bold;">Introduction:</form:label>
-                <form:textarea path="introduction" class="form-control"/>
+            	<div class="form-row">
+               	 	<form:label for="introduction" path="introduction" style="font-weight: bold;">Introduction:</form:label>
+               	 	<form:textarea path="introduction" class="form-control"/>
+            	</div>
+            
+            <!-- Error Messages -->
+            <div>
+            	<form:errors path="name" class="error text-danger"/>
+            	<br/>
+            	<form:errors path="favoriteTreat" class="error text-danger"/>
+            	<br/>
+            	<form:errors path="species" class="error text-danger"/>
+            	<br/>
+            	<form:errors path="age" class="error text-danger"/>
+            	<form:errors path="gender" class="error text-danger"/>
+            	<br/>
+            	<form:errors path="introduction" class="error text-danger"/>
             </div>
             
             <div class="form-row" style="padding-left: 1000px; margin-top: 20px;">
